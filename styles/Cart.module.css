@@ -1,0 +1,74 @@
+.container{
+    padding: 50px;
+    display: flex;
+}
+
+.left{
+    flex:2; 
+}
+
+.right{
+    flex: 1;
+}
+
+.imgWrapper{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    left: 10px;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 40px;
+    font-size: 18px;
+}
+
+.name{
+    font-weight: 200;
+    
+}
+.extras{
+    font-weight: 200;
+}
+.price{
+    font-weight: 200;
+}
+.quantity{
+    font-weight: 200;
+}
+.total{
+    font-weight: 500;
+}
+
+.wrapper{
+    width: 90%;
+    max-height: 300px;
+    padding: 50px;
+    background-color: #666;
+    padding-top: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.totalText{
+    
+    padding: 6px;
+}
+
+.totalTextTitle{
+    font-size: 20px;
+}
+
+
+.button{
+    font-weight: bold;
+    background-color: #ea5c2b;
+    margin: 10px;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
