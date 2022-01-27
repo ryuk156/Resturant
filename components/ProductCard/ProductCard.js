@@ -1,22 +1,23 @@
 import Image from "next/image";
 import styles from "../../styles/ProductCard.module.css";
+import Link from 'next/link'
 
-const ProductCard = () => {
+const ProductCard = ({product}) => {
   return (
     <div className={styles.container}>
+      <Link href={`/Product/${product._id}`} passHref>
       <Image
-        src="/images/pizza.png"
+        src={product.img}
         width="160px"
         height="160px"
         alt="pizza_image"
       />
-      <div className={styles.title}>Cheese Pizza</div>
-      <div className={styles.price}> $50.6</div>
+      </Link>
+     
+      <div className={styles.title}>{product.title}</div>
+      <div className={styles.price}>$ {product.prices[0]}</div>
       <div className={styles.desc}>
-        The most popular cheeses used in the preparation of pizza are mozzarella
-        (accounting for about 30%), provolone, cheddar and Parmesan. Emmental,
-        Romano and ricotta are often used as toppings, and processed pizza
-        cheeses manufactured specifically for pizza are mass-produced.
+        {product.desc}
       </div>
     </div>
   );

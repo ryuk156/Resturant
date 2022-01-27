@@ -3,7 +3,8 @@ import styles from "../../styles/ProductList.module.css";
 import ProductCard from "../ProductCard/ProductCard";
 
 
-const ProductList = () =>{
+const ProductList = ({productList}) =>{
+  console.log(productList)
     return(
        <div className={styles.container}>
          <h1 className={styles.title}>
@@ -13,14 +14,13 @@ const ProductList = () =>{
          “People who love to eat are always the best people.” —Julia Child
          </h1 >
          <div className={styles.wrapper}>
-         <ProductCard />
-         <ProductCard />
-         <ProductCard />
-         <ProductCard />
-         <ProductCard />
-         <ProductCard />
-         <ProductCard />
-         <ProductCard />
+           {productList.map((product)=>{
+             return (
+              <ProductCard product={product} key={product._id}/>
+             )
+           })}
+        
+       
         
          </div>
        </div>
